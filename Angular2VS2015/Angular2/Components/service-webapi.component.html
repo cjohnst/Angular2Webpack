@@ -1,0 +1,52 @@
+﻿<h1>Service Web API</h1>
+
+
+
+
+Customer:
+<table>
+    <tr>
+        <td>Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+    </tr>
+    <tr *ngFor="let c of customers">
+        <td>{{c.Id}}</td>
+        <td>{{c.FirstName}}</td>
+        <td>{{c.LastNamexx}} xxx</td>
+
+    </tr>
+</table>
+
+<div [hidden]="!customersWorking">Loading....</div>
+
+<hr />
+
+
+
+Detail:
+
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>{{customer.Id}}</td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>{{customer.FirstName}}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{customer.LastName}}</td>
+    </tr>
+</table>
+
+<hr />
+
+<select  [(ngModel)]="selectedCustomer">
+    <option *ngFor="let c of customers" [ngValue]="c">{{c.LastName}}</option>
+</select>
+
+selectedCustomer: {{selectedCustomer | json}}
+

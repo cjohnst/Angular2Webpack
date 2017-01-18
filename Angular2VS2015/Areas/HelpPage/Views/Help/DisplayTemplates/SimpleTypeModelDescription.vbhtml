@@ -1,0 +1,3 @@
+@Imports Angular2VS2015.Areas.HelpPage.ModelDescriptions
+@ModelType SimpleTypeModelDescription
+@Model.Documentation
